@@ -48,7 +48,7 @@ Module.register("MMM-SwissCommute",{
 		// Update DOM seperatly and not only on schedule Update
 		var self = this;
 		setInterval(function() {
-			self.updateDom(this.config.animationSpeed);
+			self.updateDom(self.config.animationSpeed);
 		}, this.config.domRefresh);
 
 		this.updateTimer = null;
@@ -180,7 +180,7 @@ Module.register("MMM-SwissCommute",{
 	 * Calls processData on succesfull response.
 	 */
 	getData: function() {
-		var url = this.config.apiBase + this.getParams();
+		var url = this.config.apiBase + this.getParams() + "&_=" + new Date().getTime();
 		var self = this;
 		var retry = true;
 
