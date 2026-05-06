@@ -20,6 +20,7 @@ modules: [
 			to: 'Basel SBB', // Destination station
 			maximumEntries: 4, // Max departures displayed
 			minWalkingTime: 10 // Minimum time to get to the station
+			transportationTypes: "train" // choose transportation type or keep empty for global
 		}
 	},
 ]

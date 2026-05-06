@@ -26,6 +26,7 @@ Module.register("MMM-SwissCommute",{
 		maximumEntries: 5, // Total Maximum Entries
         minWalkingTime: -1,
         hideTrackInfo: 0,
+		transportationTypes: '',
                 
 //		titleReplace: {
 //			"Zeittabelle ": ""
@@ -218,6 +219,10 @@ Module.register("MMM-SwissCommute",{
         params += "from=" + this.config.from;
         params += "&to=" + this.config.to;
 		params += "&num=" + this.config.maximumEntries;
+
+		if (this.config.transportationTypes) {
+			params += "&transportation_types=" + this.config.transportationTypes;
+		}
                 
 		return params;
 	},
